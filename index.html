@@ -8,6 +8,34 @@
     <title>The Ascent</title>
 </head>
 <body>
+    <main>
+        <!-- #game-intro is initially shown on the game start screen -->
+        <div id="game-intro">
+          <img src="./images/logo.png" alt="" class="logo-img" />
+          <br />
+          <button id="start-button">Start Game</button>
+          <p>Use the left and right arrow to control the car!</p>
+          <img src="./images/arrows.png" alt="" class="arrows-img" />
+        </div>
+  
+        <div id="game-container">
+          <div>
+            <h2>Stats</h2>
+            <p>Score: <span id="score">0</span></p>
+            <p>Lives: <span id="lives">3</span></p>
+          </div>
+          <!-- #game-screen is initially hidden using CSS style display: none -->
+          <div id="game-screen"></div>
+        </div>
+  
+        <!-- #game-end is initially hidden using CSS style display: none -->
+        <div id="game-end">
+          <img src="./images/logo.png" alt="" class="logo-img" />
+          <h1>Game Over</h1>
+          <br />
+          <button id="restart-button">Restart</button>
+        </div>
+      </main>
 
     <script type="text/javascript" src="js/collectable.js"></script>
     <script type="text/javascript" src="js/player.js"></script>
