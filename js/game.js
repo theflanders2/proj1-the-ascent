@@ -72,4 +72,15 @@ class Game {
             this.obstacles.push(new Obstacle(this.gameScreen));
         }
     }
+
+    endGame() { // method responsible for ending the game
+        this.player.element.remove();
+        this.obstacles.forEach(obstacle => obstacle.element.remove());
+
+        this.gameIsOver = true;
+
+        this.gameScreen.style.display = 'none';
+
+        this.gameEndScreen.style.display = 'block';
+    }
 }
