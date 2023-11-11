@@ -12,7 +12,7 @@ class Obstacle {
         this.elementBear = document.createElement('img'); // bear obstacle
 
         // define tree obstacle and set its default property values
-        this.elementTree.src = './assets/obstacleTree.png';
+        this.elementTree.src = './images/obstacleTree.png';
         this.elementTree.style.position = 'absolute';
         this.elementTree.style.width = `${this.width}px`;
         this.elementTree.style.height = `${this.height}px`;
