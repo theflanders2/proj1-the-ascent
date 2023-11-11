@@ -42,5 +42,34 @@ class Game {
 
     update() { // responsible for updating the game state during each loop iteration
         this.player.move(); // return new positions of player, obstacles and collectable to update game
+
+        for (let i = 0; i < this.obstacles.length; i++) {
+            const obstacle = this.obstacles[i];
+            obstacle.move();
+
+            if (this.player.didCollide(obstacle)) {
+                obstacle.elementTree.remove();
+                this.obstacles.splice(i, 1);
+                this.lives--;
+                document.getElementById('lives').textContent = this.lives;
+                i--;
+            }
+
+            else if (obstacle.top > this.length) {
+                this.score++;
+                document.getElementById('score').textContent = this.score;
+                obstacle.elementTree.remove();
+                this.obstacles.splice(i, 1);
+                i--;
+            }
+        }
+
+        if (this.lives === 0) {
+            this.endGame();
+        }
+
+        if (Math.random() > 0.98 && this.obstacles.length < 1) {
+            this.obstacles.push(new Obstacle(this.gameScreen));
+        }
     }
 }
