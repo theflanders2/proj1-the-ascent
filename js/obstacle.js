@@ -50,4 +50,9 @@ class Obstacle {
         // this.elementBear.style.left = `${this.left}px`;
         // this.elementBear.style.left = `${this.top}px`;
     }
+
+    move () { 
+        this.top += 3; // move the obstacles down by 3 px
+        this.updatePosition(); // update the obstacles positions
+    }
 }
