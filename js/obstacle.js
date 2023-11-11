@@ -39,4 +39,15 @@ class Obstacle {
         // this.gameScreen.appendChild(this.elementBoulder);
         // this.gameScreen.appendChild(this.elementBear);
     }
+
+    updatePosition() { // update obstacles positions based on properties left and top
+        this.elementTree.style.left = `${this.left}px`;
+        this.elementTree.style.left = `${this.top}px`;
+
+        // this.elementBoulder.style.left = `${this.left}px`;
+        // this.elementBoulder.style.left = `${this.top}px`;
+
+        // this.elementBear.style.left = `${this.left}px`;
+        // this.elementBear.style.left = `${this.top}px`;
+    }
 }
