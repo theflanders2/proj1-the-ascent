@@ -1,18 +1,18 @@
 window.onload = function () {
   const startButton = document.getElementById("start-button");
   const restartButton = document.getElementById("restart-button");
-
-  startButton.addEventListener("click", function () {
-    startGame();
-    let game;
-  });
-
+  let game;
+  
   function startGame() {
     game = new Game();
     // console.log("start-game");
     game.start();
   }
 
+  function restartGame() {
+    location.reload();
+  }
+  
   function handleKeydown(event) {
     const key = event.key;
     const possibleKeystrokes = [
@@ -44,11 +44,15 @@ window.onload = function () {
     }
   }
 
-  // Add the handleKeydown function as an event listener for the keydown event
-  window.addEventListener("keydown", handleKeydown);
+  startButton.addEventListener("click", function () {
+    startGame();
+  });
 
   restartButton.addEventListener("click", function () {
     // Call the restartGame function when the button is clicked
     restartGame();
   });
+
+  // Add the handleKeydown function as an event listener for the keydown event
+  window.addEventListener("keydown", handleKeydown);
 };
