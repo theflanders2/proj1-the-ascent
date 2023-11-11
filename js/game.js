@@ -32,5 +32,15 @@ class Game {
         if (this.gameIsOver) { // interrupt function to stop loop if this.gameIsOver === true
             return; // empty return interrupts/stops loop/iteration
         }
+
+        this.update(); // update the game
+
+        window.requestAnimationFrame(()=> this.gameLoop());
+        // invoke gameLoop () within itself to ensure the function runs repeatedly (recursive function)
+        // use window.requestAnimationFrame() to invoke gameLoop to ensure a consistent frame rate
+    }
+
+    update() { // responsible for updating the game state during each loop iteration
+        this.player.move(); // return new positions of player, obstacles and collectable to update game
     }
 }
