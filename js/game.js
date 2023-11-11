@@ -27,4 +27,10 @@ class Game {
         this.gameScreen.style.display = 'block' // show game screen
         this.gameLoop (); // player, obstacles and collectable start at specific position
     }
+
+    gameLoop () { // loops game as long as this.gameIsOver === false
+        if (this.gameIsOver) { // interrupt function to stop loop if this.gameIsOver === true
+            return; // empty return interrupts/stops loop/iteration
+        }
+    }
 }
