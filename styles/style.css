@@ -10,7 +10,7 @@ p {
 
 #game-intro {
   padding: 20px 0px;
-  background-image: url(../images/game-start01.jpg);
+  background-image: url(../images/game-start.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -34,7 +34,7 @@ p {
   padding: 20px 0px;
   overflow: hidden;
   position: relative;
-  background-image: url(../images/front-view-tree-bark-surface.jpg);
+  background-image: url(../images/backgroundWall.png);
   background-size: cover;
   animation: slide 5s linear infinite;
   /* TO BE REMOVED AND DONE THROUGH JS
