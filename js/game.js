@@ -80,7 +80,7 @@ class Game {
 
   endGame() {
     // method responsible for ending the game
-    this.player.element.remove(); // remove player from screen
+    this.player.elementPlayerClimber.remove(); // remove player from screen
     this.obstacles.forEach((obstacle) => obstacle.element.remove()); // remove the obstacles from the screen
 
     this.gameIsOver = true; // cancel the execution of gameLoop()
