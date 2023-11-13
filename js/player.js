@@ -1,5 +1,5 @@
 class Player {
-  constructor(gameScreen, left, top, width, height, /*directionX, directionY, element*/) {
+  constructor(gameScreen, left, top, width, height, imgSrc/*directionX, directionY*/) {
     this.gameScreen = gameScreen;
     this.left = left;
     this.top = top;
@@ -9,7 +9,7 @@ class Player {
     this.directionY = 0;
     this.elementPlayerClimber = document.createElement("img");
 
-    this.elementPlayerClimber.src = './images/playerClimber.png';
+    this.elementPlayerClimber.src = imgSrc;
     this.elementPlayerClimber.style.position = "absolute";
     this.elementPlayerClimber.style.width = `${width}px`;
     this.elementPlayerClimber.style.height = `${height}px`;
