@@ -1,5 +1,5 @@
 class Player {
-  constructor(gameScreen, left, top, width, height, imgSrc/*directionX, directionY*/) {
+  constructor(gameScreen, left, top, width, height, imgSrc) {
     this.gameScreen = gameScreen;
     this.left = left;
     this.top = top;
@@ -19,7 +19,8 @@ class Player {
     this.gameScreen.appendChild(this.elementPlayerClimber);
   }
 
-  move() { // update player position based on directionX and directionY
+  move() {
+    // update player position based on directionX and directionY
     this.left += this.directionX;
     this.top += this.directionY;
 
@@ -27,15 +28,18 @@ class Player {
       this.left = 10;
     }
 
-    if (this.top < 10) { // handles top side
+    if (this.top < 10) {
+      // handles top side
       this.top = 10;
     }
 
-    if (this.left > this.gameScreen.offsetWidth - this.width - 10) { // handles right hand side
+    if (this.left > this.gameScreen.offsetWidth - this.width - 10) {
+      // handles right hand side
       this.left = this.gameScreen.offsetWidth - this.width - 10;
     }
 
-    if (this.top > this.gameScreen.offsetHeight - this.height - 10) { // handles bottom side
+    if (this.top > this.gameScreen.offsetHeight - this.height - 10) {
+      // handles bottom side
       this.top = this.gameScreen.offsetHeight - this.height - 10;
     }
 
@@ -49,7 +53,7 @@ class Player {
 
   didCollide(obstacle) {
     const playerRect = this.elementPlayerClimber.getBoundingClientRect();
-    const obstacleRect = obstacle.elementPlayerClimber.getBoundingClientRect();
+    const obstacleRect = obstacle.elementTree.getBoundingClientRect();
 
     if (
       playerRect.left < obstacleRect.right &&
@@ -58,9 +62,7 @@ class Player {
       playerRect.bottom > obstacleRect.top
     ) {
       return true;
-    } 
-    
-    else {
+    } else {
       return false;
     }
   }
