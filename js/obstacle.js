@@ -8,8 +8,8 @@ class Obstacle {
         this.width = 70;
         this.height = 90;
         this.elementTree = document.createElement('img'); // tree obstacle
-        this.elementBoulder = document.createElement('img'); // boudler obstacle
-        this.elementBear = document.createElement('img'); // bear obstacle
+        /*this.elementBoulder = document.createElement('img'); // boudler obstacle
+        this.elementBear = document.createElement('img'); // bear obstacle*/
 
         // define tree obstacle and set its default property values
         this.elementTree.src = './images/obstacleTree.png';
@@ -42,7 +42,7 @@ class Obstacle {
 
     updatePosition() { // update obstacles positions based on properties left and top
         this.elementTree.style.left = `${this.left}px`;
-        this.elementTree.style.left = `${this.top}px`;
+        this.elementTree.style.top = `${this.top}px`;
 
         // this.elementBoulder.style.left = `${this.left}px`;
         // this.elementBoulder.style.left = `${this.top}px`;
@@ -53,6 +53,6 @@ class Obstacle {
 
     move () { 
         this.top += 3; // move the obstacles down by 3 px
-        this.updatePosition(); // update the obstacles positions
+        this.updatePosition(); // update the obstacles' positions
     }
 }
