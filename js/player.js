@@ -53,13 +53,23 @@ class Player {
 
   didCollide(obstacle) {
     const playerRect = this.elementPlayerClimber.getBoundingClientRect();
-    const obstacleRect = obstacle.elementTree.getBoundingClientRect();
+    const obstacleRectTree = obstacle.elementTree.getBoundingClientRect();
+    const obstacleBoulder = obstacle.elementBoulder.getBoundingClientRect();
+    const obstacleBear = obstacle.elementBear.getBoundingClientRect();
 
     if (
-      playerRect.left < obstacleRect.right &&
-      playerRect.right > obstacleRect.left &&
-      playerRect.top < obstacleRect.bottom &&
-      playerRect.bottom > obstacleRect.top
+      playerRect.left <
+        (obstacleRectTree.right ||
+          obstacleBoulder.right ||
+          obstacleBear.right) &&
+      playerRect.right >
+        (obstacleRectTree.left || obstacleBoulder.left || obstacleBear.left) &&
+      playerRect.top <
+        (obstacleRectTree.bottom ||
+          obstacleBoulder.bottom ||
+          obstacleBear.bottom) &&
+      playerRect.bottom >
+        (obstacleRectTree.top || obstacleBoulder.top || obstacleBear.top)
     ) {
       return true;
     } else {
