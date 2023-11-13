@@ -20,7 +20,7 @@ class Obstacle {
         this.elementTree.style.left = `${this.left}px`;
 
         // define boulder obstacle and set its default property values
-        // this.elementBoulder.src = './assets/obstacleBoulder.png';
+        // this.elementBoulder.src = './images/obstacleBoulder.png';
         // this.elementBoulder.style.position = 'absolute';
         // this.elementBoulder.style.width = `${this.width}px`;
         // this.elementBoulder.style.height = `${this.height}px`;
@@ -28,7 +28,7 @@ class Obstacle {
         // this.elementBoulder.style.left = `${this.left}px`;
 
         // define bear obstacle and set its default property values
-        // this.elementBear.src = './assets/obstacleBear.png';
+        // this.elementBear.src = './images/obstacleBear.png';
         // this.elementBear.style.position = 'absolute';
         // this.elementBear.style.width = `${this.width}px`;
         // this.elementBear.style.height = `${this.height}px`;

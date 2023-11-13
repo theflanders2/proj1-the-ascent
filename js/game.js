@@ -9,7 +9,7 @@ class Game {
             500, // vertical position of player in pixels
             100, // width of image element representing player in pixels
             100, // height of image element representing player in pixels
-            './assets/playerClimber.png' // image element representing player
+            './images/playerClimber.png' // image element representing player
         );
         this.height = 600; // height of game screen
         this.width = 500; // width of game screen

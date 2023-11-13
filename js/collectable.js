@@ -10,7 +10,7 @@ class Collectable {
         this.elementGoat = document.createElement('img'); // goat collectable
 
         // define goat collectable and set its default property values
-        this.elementGoat.src = './assets/obstacleTree.png';
+        this.elementGoat.src = './images/collectableGoat.png';
         this.elementGoat.style.position = 'absolute';
         this.elementGoat.style.width = `${this.width}px`;
         this.elementGoat.style.height = `${this.height}px`;
