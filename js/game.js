@@ -47,40 +47,40 @@ class Game {
             const obstacle = this.obstacles[i];
             obstacle.move();
 
-            if (this.player.didCollide(obstacle)) {
-                obstacle.elementTree.remove();
-                this.obstacles.splice(i, 1);
-                this.lives--;
-                document.getElementById('lives').textContent = this.lives;
-                i--;
+            if (this.player.didCollide(obstacle)) { // if player collides with an obstacle
+                obstacle.elementTree.remove(); // remove obstacle from the DOM
+                this.obstacles.splice(i, 1); // remove obstacle object from the array
+                this.lives--; // reduce lives by 1
+                document.getElementById('lives').textContent = this.lives; // update number of lives displayed
+                i--; // update the counter variable to account for removed obstacle
             }
 
             else if (obstacle.top > this.length) {
-                this.score++;
-                document.getElementById('score').textContent = this.score;
-                obstacle.elementTree.remove();
-                this.obstacles.splice(i, 1);
-                i--;
+                this.score++; // increase the score by 1
+                document.getElementById('score').textContent = this.score; // update score displayed
+                obstacle.elementTree.remove(); // remove obstacle from the DOM
+                this.obstacles.splice(i, 1); // remove obstacle object from the array
+                i--; // update the counter variable to account for the removed obstacle
             }
         }
 
-        if (this.lives === 0) {
+        if (this.lives === 0) { // end the game
             this.endGame();
         }
 
-        if (Math.random() > 0.98 && this.obstacles.length < 1) {
+        if (Math.random() > 0.98 && this.obstacles.length < 1) { // create new obstacle based on random probability when there are no other obstacles on screen
             this.obstacles.push(new Obstacle(this.gameScreen));
         }
     }
 
     endGame() { // method responsible for ending the game
-        this.player.element.remove();
-        this.obstacles.forEach(obstacle => obstacle.element.remove());
+        this.player.element.remove(); // remove player from screen
+        this.obstacles.forEach(obstacle => obstacle.element.remove()); // remove the obstacles from the screen
 
-        this.gameIsOver = true;
+        this.gameIsOver = true; // cancel the execution of gameLoop()
 
-        this.gameScreen.style.display = 'none';
+        this.gameScreen.style.display = 'none'; // hide game screen
 
-        this.gameEndScreen.style.display = 'block';
+        this.gameEndScreen.style.display = 'block'; // show end game screen
     }
 }
