@@ -5,8 +5,8 @@ class Obstacle {
         // if Math.random generates 0, 70 will be added
         // so obstacle is not off screen - final number converted to px
         this.top = 0;
-        this.width = 100;
-        this.height = 150;
+        this.width = 70;
+        this.height = 90;
         this.elementTree = document.createElement('img'); // tree obstacle
         this.elementBoulder = document.createElement('img'); // boudler obstacle
         this.elementBear = document.createElement('img'); // bear obstacle

@@ -7,8 +7,8 @@ class Game {
             this.gameScreen,
             300, // horizontal position of player in pixels
             500, // vertical position of player in pixels
-            100, // width of image element representing player in pixels
-            100, // height of image element representing player in pixels
+            60, // width of image element representing player in pixels
+            80, // height of image element representing player in pixels
             './images/playerClimber.png' // image element representing player
         );
         this.height = 600; // height of game screen
