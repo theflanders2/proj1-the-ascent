@@ -8,8 +8,8 @@ class Obstacle {
     this.width = 70;
     this.height = 90;
     this.elementTree = document.createElement("img"); // tree obstacle
-    /*this.elementBoulder = document.createElement('img'); // boudler obstacle
-        this.elementBear = document.createElement('img'); // bear obstacle*/
+    this.elementBoulder = document.createElement("img"); // boudler obstacle
+    this.elementBear = document.createElement("img"); // bear obstacle*/
 
     // define tree obstacle and set its default property values
     this.elementTree.src = "./images/obstacleTree.png";
@@ -20,24 +20,24 @@ class Obstacle {
     this.elementTree.style.left = `${this.left}px`;
 
     // define boulder obstacle and set its default property values
-    // this.elementBoulder.src = './images/obstacleBoulder.png';
-    // this.elementBoulder.style.position = 'absolute';
-    // this.elementBoulder.style.width = `${this.width}px`;
-    // this.elementBoulder.style.height = `${this.height}px`;
-    // this.elementBoulder.style.top = `${this.top}px`;
-    // this.elementBoulder.style.left = `${this.left}px`;
+    this.elementBoulder.src = "./images/obstacleBoulder.png";
+    this.elementBoulder.style.position = "absolute";
+    this.elementBoulder.style.width = `${this.width}px`;
+    this.elementBoulder.style.height = `${this.height}px`;
+    this.elementBoulder.style.top = `${this.top}px`;
+    this.elementBoulder.style.left = `${this.left}px`;
 
     // define bear obstacle and set its default property values
-    // this.elementBear.src = './images/obstacleBear.png';
-    // this.elementBear.style.position = 'absolute';
-    // this.elementBear.style.width = `${this.width}px`;
-    // this.elementBear.style.height = `${this.height}px`;
-    // this.elementBear.style.top = `${this.top}px`;
-    // this.elementBear.style.left = `${this.left}px`;
+    this.elementBear.src = "./images/obstacleBear.png";
+    this.elementBear.style.position = "absolute";
+    this.elementBear.style.width = `${this.width}px`;
+    this.elementBear.style.height = `${this.height}px`;
+    this.elementBear.style.top = `${this.top}px`;
+    this.elementBear.style.left = `${this.left}px`;
 
     this.gameScreen.appendChild(this.elementTree);
-    // this.gameScreen.appendChild(this.elementBoulder);
-    // this.gameScreen.appendChild(this.elementBear);
+    this.gameScreen.appendChild(this.elementBoulder);
+    this.gameScreen.appendChild(this.elementBear);
   }
 
   updatePosition() {
@@ -45,11 +45,11 @@ class Obstacle {
     this.elementTree.style.left = `${this.left}px`;
     this.elementTree.style.top = `${this.top}px`;
 
-    // this.elementBoulder.style.left = `${this.left}px`;
-    // this.elementBoulder.style.left = `${this.top}px`;
+    this.elementBoulder.style.left = `${this.left}px`;
+    this.elementBoulder.style.top = `${this.top}px`;
 
-    // this.elementBear.style.left = `${this.left}px`;
-    // this.elementBear.style.left = `${this.top}px`;
+    this.elementBear.style.left = `${this.left}px`;
+    this.elementBear.style.top = `${this.top}px`;
   }
 
   move() {

@@ -53,7 +53,9 @@ class Game {
 
       if (this.player.didCollide(obstacle)) {
         // if player collides with an obstacle
-        obstacle.elementTree.remove(); // remove obstacle from the DOM
+        obstacle.elementTree.remove(); // remove tree obstacle from the DOM
+        obstacle.elementBoulder.remove(); // remove boulder obstacle from the DOM
+        obstacle.elementBear.remove(); // remove bear obstacle from the DOM
         this.obstacles.splice(i, 1); // remove obstacle object from the array
         this.lives--; // reduce lives by 1
         document.getElementById("lives").textContent = this.lives; // update number of lives displayed
@@ -61,7 +63,9 @@ class Game {
       } else if (obstacle.top > this.height) {
         this.score++; // increase the score by 1
         document.getElementById("score").textContent = this.score; // update score displayed
-        obstacle.elementTree.remove(); // remove obstacle from the DOM
+        obstacle.elementTree.remove(); // remove tree obstacle from the DOM
+        obstacle.elementBoulder.remove(); // remove boulder obstacle from the DOM
+        obstacle.elementBear.remove(); // remove bear obstacle from the DOM
         this.obstacles.splice(i, 1); // remove obstacle object from the array
         i--; // update the counter variable to account for the removed obstacle
       }
