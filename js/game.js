@@ -5,8 +5,8 @@ class Game {
         this.gameEndScreen = document.getElementById('game-end'); // access elements in HTML file with ID #game-end
         this.player = new Player ( // new Player () class instance
             this.gameScreen,
-            300, // horizontal position of player in pixels
-            500, // vertical position of player in pixels
+            10, // horizontal position of player in pixels
+            550, // vertical position of player in pixels
             60, // width of image element representing player in pixels
             80, // height of image element representing player in pixels
             './images/playerClimber.png' // image element representing player
@@ -55,7 +55,7 @@ class Game {
                 i--; // update the counter variable to account for removed obstacle
             }
 
-            else if (obstacle.top > this.length) {
+            else if (obstacle.top > this.height) {
                 this.score++; // increase the score by 1
                 document.getElementById('score').textContent = this.score; // update score displayed
                 obstacle.elementTree.remove(); // remove obstacle from the DOM
