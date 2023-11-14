@@ -1,45 +1,69 @@
 body {
   padding: 0;
   text-align: center;
+  font-family: "Arial", sans-serif;
 }
 
 p {
   margin: 0;
   padding: 0;
+  font-size: 14px;
 }
 
-#game-intro {
-  padding: 20px 0px;
-  background-image: url(../images/game-start.jpg);
+h1 {
+  font-family: "Rock Salt", cursive;
+  margin: 0;
+  color: red;
+}
+
+#game-end h1 {
+  position: relative;
+  top: 52%;
+  left: -13%;
+}
+
+#game-intro,
+#game-end {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  margin: 0 auto;
+  padding: 20px;
+  box-sizing: border-box;
+  border: 3px solid limegreen;
+  border-radius: 2%;
+}
+
+#game-intro {
+  background-image: url(../images/game-start.jpg);
   width: 700px;
   height: 658px;
-  border: 3px solid limegreen;
-  margin: 0 auto;
+}
+
+#game-end {
+  display: none;
+  background-image: url(../images/game-end.jpg);
+  width: 802px;
+  height: 658px;
 }
 
 #game-container {
   display: flex;
-  width: 100%;
   padding: 20px 0px;
   justify-content: center;
-  /* visibility: hidden; */
+  align-items: center;
 }
 
 #game-screen {
   display: none;
-  align-content: center;
   padding: 20px 0px;
   overflow: hidden;
   position: relative;
   background-image: url(../images/backgroundWall.jpg);
   background-size: cover;
   animation: slide 5s linear infinite;
-  /* TO BE REMOVED AND DONE THROUGH JS
-  width: 1000px;
-  height: 1000px; */
+  border: 3px solid #397c13;
+  border-radius: 2%;
 }
 
 @keyframes slide {
@@ -54,15 +78,6 @@ p {
   }
 }
 
-#game-end {
-  display: none;
-}
-
-.game-intro p {
-  font-size: 18px;
-  font-family: "Verdana";
-}
-
 .logo-img {
   width: 350px;
 }
@@ -71,7 +86,7 @@ p {
   width: 150px;
 }
 
-body button {
+button {
   font-size: 24px;
   background-color: #397c13;
   color: #fff;
@@ -80,16 +95,62 @@ body button {
   box-shadow: 0;
   border-radius: 5px;
   margin: 20px 0;
-}
-
-button:hover {
   cursor: pointer;
 }
 
-.game-intro-content {
+button:hover {
+  background-color: #2c5a0e;
+}
+
+.game-intro-content,
+.game-end-content {
   display: flex;
   flex-direction: column;
   align-items: center;
   position: relative;
-  top: 35%;
+}
+.game-intro-content {
+  top: 32%;
+}
+.game-end-content {
+  top: 51%;
+  left: -13%;
+}
+
+#game-container {
+  display: flex;
+  padding: 20px 0;
+}
+
+#game-screen {
+  padding: 20px 0;
+  overflow: hidden;
+  position: relative;
+  background-image: url(../images/backgroundWall.jpg);
+  background-size: cover;
+  animation: slide 5s linear infinite;
+  border: 3px solid #397c13;
+  border-radius: 2%;
+}
+
+.game-stats {
+  width: 100px;
+  height: 100px;
+  background-color: #fff;
+  border: 3px solid #397c13;
+  border-radius: 10px;
+  box-sizing: border-box;
+  padding: 10px;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 20px;
+}
+
+.game-stats h2 {
+  margin: 0;
+}
+
+.game-stats p {
+  margin: 5px 0;
 }
