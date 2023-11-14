@@ -36,7 +36,7 @@ p {
   position: relative;
   background-image: url(../images/backgroundWall.jpg);
   background-size: cover;
-  animation: slide 2s linear infinite;
+  animation: slide 5s linear infinite;
   /* TO BE REMOVED AND DONE THROUGH JS
   width: 1000px;
   height: 1000px; */
