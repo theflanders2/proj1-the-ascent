@@ -22,7 +22,7 @@ class Collectable {
 
     updatePosition() { // update collectable position based on properties left and top
         this.elementGoat.style.left = `${this.left}px`;
-        this.elementGoat.style.left = `${this.top}px`;
+        this.elementGoat.style.top = `${this.top}px`;
     }
 
     move () { 
