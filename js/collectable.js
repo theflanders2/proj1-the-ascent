@@ -1,12 +1,12 @@
 class Collectable {
     constructor (gameScreen) {
         this.gameScreen = gameScreen;
-        this.left = Math.floor(Math.random() * 300 + 70)
+        this.left = Math.floor(Math.random() * 400 + 10)
         // if Math.random generates 0, 70 will be added
         // so obstacle is not off screen - final number converted to px
         this.top = 0;
-        this.width = 100;
-        this.height = 150;
+        this.width = 80;
+        this.height = 60;
         this.elementGoat = document.createElement('img'); // goat collectable
 
         // define goat collectable and set its default property values
