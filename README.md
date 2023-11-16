@@ -1,39 +1,85 @@
 ![playerClimber](https://hackmd.io/_uploads/Sys7UnQNT.png)
 
-# The Ascent | Ironhack Project 1
+# The Ascent
 
-## Introduction
-For our Module 1 project, we will create a browser-based game using HTML, CSS, JavaScript, DOM manipulation, and Object-Oriented Programming (OOP).
+[Click here to see deployed game](http://github.com)
 
-The purpose of this project is to consolidate and practice all the knowledge we have acquired in this module. We may choose any game idea we like, but it must meet the technical requirements in this lesson.
-
-
-
-## Technical Requirements
-1. Render a game in the browser.
-
-2. Have logic for winning and/or losing and show feedback to the player in either case.
-
-3. Our game must have logic that allows the player to win or lose.
-
-4. Our game code must be organized in separate files for HTML, CSS, and JavaScript.
-
-5. Use plain JavaScript for DOM manipulation.
-
-6. Our game entities and elements must be organized using classes and OOP.
-
-7. Have a repo on GitHub.
-
-8. Have at least one (1) commit per day that you worked on.
-
-9. Must deploy our game online using GitHub Pages so anyone can play it.
-
-10. Our code should follow the principles of KISS (Keep It Simple Stupid) and DRY (Don’t Repeat Yourself).
+## Description
+Brief description of the project
 
 
+## MVP
+_MVP definition here, list of minimum features_
 
-## Used Technologies
-HTML, CSS, Javascript
+
+## Backlog
+_List of features you might implement after the MVP_
+
+
+## Technologies Used
+- HTML
+- CSS
+- JavaScript
+- DOM Manipulation
+
+## Project Structure
+
+### game.js
+- Game() class
+  - this.startScreen
+  - this.gameScreen
+  - this.gameEndScreen
+  - this.gameStats
+  - this.player
+    - new Player ()
+      - this.height
+      - this.width
+- start() method
+- gameLoop () method
+- update() method
+- endGame() method
+
+### player.js
+- Player() class
+- move() method
+- updatePosition() method
+- didCollide() method
+
+### obstacle.js
+- Obstacle() class
+- updatePosition() method
+- move() method
+
+### collectable.js
+- Collectable() class
+- updatePosition() method
+- move() method
+
+### script.js
+- window.onload
+- startGame() function
+- restartGame() function
+- handleKeydown() function
+- startButton eventListener
+- restartButton eventListener
+
+
+## States
+- Intro Screen
+- Game Screen
+- End Screen
+
+
+## Task
+_List of tasks in order of priority_
+
+
+## Links
+
+- [Trello Link](https://trello.com/b/mrn2ZLo1)
+- [Slides Link](http://slides.com)
+- [Github repository Link](https://github.com/theflanders2/proj1-the-ascent)
+- [Deployment Link](https://theflanders2.github.io/proj1-the-ascent/)
 
 ## Contributors / Team
 [Brice Cabioch](https://github.com/Bricebrice), [Kenneth Flanders](https://github.com/theflanders2)
