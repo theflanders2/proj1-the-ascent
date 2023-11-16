@@ -1,8 +1,6 @@
-![playerClimber](https://hackmd.io/_uploads/Sys7UnQNT.png)
-
 # The Ascent
 
-[Click here to see deployed game](http://github.com)
+[Play now!](https://theflanders2.github.io/proj1-the-ascent/)
 
 ## Description
 Brief description of the project
@@ -31,9 +29,15 @@ _List of features you might implement after the MVP_
   - this.gameEndScreen
   - this.gameStats
   - this.player
-    - new Player ()
-      - this.height
-      - this.width
+    - new Player () class
+      - this.gamescreen
+  - this.height
+  - this.width
+  - this.obstacles
+  - this.collectable
+  - this.score
+  - this.lives
+  - this.gameIsOver
 - start() method
 - gameLoop () method
 - update() method
@@ -41,17 +45,39 @@ _List of features you might implement after the MVP_
 
 ### player.js
 - Player() class
+  - this.gameScreen
+  - this.left
+  - this.top
+  - this.width
+  - this.height
+  - this.directionX
+  - this.directionY
+  - this.elementPlayerClimber
 - move() method
 - updatePosition() method
 - didCollide() method
 
 ### obstacle.js
 - Obstacle() class
+  - this.gameScreen
+  - this.left
+  - this.top
+  - this.width
+  - this.height
+  - this.elementTree
+  - this.elementBoulder
+  - this.elementBear
 - updatePosition() method
 - move() method
 
 ### collectable.js
 - Collectable() class
+  - this.gameScreen
+  - this.left
+  - this.top
+  - this.width
+  - this.height
+  - this.elementGoat
 - updatePosition() method
 - move() method
 
