@@ -19,6 +19,7 @@ class Game {
     this.score = 0; // track player's score, score increases every time an obstacle is passed
     this.lives = 3; // track number of lives the player has left
     this.gameIsOver = false; // track whether the game is over
+    this.elapsedTime = 0; // track elapsed time in seconds
   }
 
   start() {
@@ -49,6 +50,11 @@ class Game {
     // responsible for updating the game state during each loop iteration
     this.player.move(); // return new positions of player, obstacles and collectable to update game
 
+    this.elapsedTime += 1 / 60; // Assuming 60 frames per second
+    document.getElementById("score").textContent = this.elapsedTime.toFixed(2);
+    document.getElementById("end-score").textContent =
+      this.elapsedTime.toFixed(2);
+
     for (let i = 0; i < this.obstacles.length; i++) {
       const obstacle = this.obstacles[i];
       obstacle.move();
@@ -63,8 +69,8 @@ class Game {
         document.getElementById("lives").textContent = this.lives; // update number of lives displayed
         i--; // update the counter variable to account for removed obstacle
       } else if (obstacle.top > this.height) {
-        this.score++; // increase the score by 1
-        document.getElementById("score").textContent = this.score; // update score displayed
+        // this.score += 1; // increase the score by 1
+        // document.getElementById("score").textContent = this.score; // update score displayed
         obstacle.elementTree.remove(); // remove tree obstacle from the DOM
         obstacle.elementBoulder.remove(); // remove boulder obstacle from the DOM
         obstacle.elementBear.remove(); // remove bear obstacle from the DOM
