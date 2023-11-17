@@ -84,7 +84,7 @@ class Game {
       this.endGame();
     }
 
-    if (Math.random() > 0.98 && this.obstacles.length < 1) {
+    if (Math.random() > 0.98 && this.obstacles.length < 3) {
       // create new obstacle based on random probability when there are no other obstacles on screen
       this.obstacles.push(new Obstacle(this.gameScreen));
     }
@@ -93,7 +93,9 @@ class Game {
   endGame() {
     // method responsible for ending the game
     this.player.elementPlayerClimber.remove(); // remove player from screen
-    this.obstacles.forEach((obstacle) => obstacle.element.remove()); // remove the obstacles from the screen
+    this.obstacles.forEach((obstacle) => obstacle.elementTree.remove()); // remove the obstacles from the screen
+    this.obstacles.forEach((obstacle) => obstacle.elementBoulder.remove()); // remove the obstacles from the screen
+    this.obstacles.forEach((obstacle) => obstacle.elementBear.remove()); // remove the obstacles from the screen
 
     this.gameIsOver = true; // cancel the execution of gameLoop()
 
