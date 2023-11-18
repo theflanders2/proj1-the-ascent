@@ -102,7 +102,7 @@
 ## Links
 
 - [Trello Link](https://trello.com/b/mrn2ZLo1)
-- [Slides Link](123)
+- [Google Slides Link](https://docs.google.com/presentation/d/e/2PACX-1vQ4hH55SilmgT_bm-CBjRfk5C8Q61GvYJtxBHxHoFVwNycoPinKGzlR9w-zkHB4X1JSXCvA8C1wftRM/pub?start=false&loop=false&delayms=3000)
 - [Github repository Link](https://github.com/theflanders2/proj1-the-ascent)
 - [Deployment Link](https://theflanders2.github.io/proj1-the-ascent/)
 
