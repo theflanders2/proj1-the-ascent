@@ -3,16 +3,16 @@
 [Play now!](https://theflanders2.github.io/proj1-the-ascent/)
 
 ## Description
-Brief description of the project
+***The Ascent*** is a game where players try to survive as long as possible. The game ends when the climber has collided with three obstacles. After the game ends, the time (in seconds) is displayed on the end screen to let the player know how long they were able to survive.
 
-
-## MVP
-
-_MVP definition here, list of minimum features_
+## Main Functionalities
+- Obstacles appear randomly, on different levels and move automatically
+- Player changes direction by using the following arrows `left`, `right`, `up` and `down`.
+- Time elapsed is tracked and displayed at the end end screen.
 
 ## Backlog
-
-_List of features you might implement after the MVP_
+- Add the ability to set the game difficulty
+- Add logic to increase the speed of the obstacle
 
 ## Technologies Used
 
@@ -41,7 +41,7 @@ _List of features you might implement after the MVP_
   - this.lives
   - this.gameIsOver
 - start() method
-- gameLoop () method
+- gameLoop() method
 - update() method
 - endGame() method
 
@@ -69,11 +69,9 @@ _List of features you might implement after the MVP_
   - this.width
   - this.height
   - this.elementBoulder
-  - this.elementBoulder
-  - this.elementBear
 - updatePosition() method
 - move() method
-
+<!-- 
 ### collectable.js
 
 - Collectable() class
@@ -84,7 +82,7 @@ _List of features you might implement after the MVP_
   - this.height
   - this.elementGoat
 - updatePosition() method
-- move() method
+- move() method -->
 
 ### script.js
 
@@ -100,10 +98,6 @@ _List of features you might implement after the MVP_
 - Intro Screen
 - Game Screen
 - End Screen
-
-## Task
-
-_List of tasks in order of priority_
 
 ## Links
 
