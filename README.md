@@ -3,7 +3,7 @@
 [Play now!](https://theflanders2.github.io/proj1-the-ascent/)
 
 ## Description
-Brief description of the project
+***The Ascent*** is a game where players try to survive as long as possible while climbing the side of a volcano and avoiding obstacles. The game ends when the player has collided with so many obstacles to the point where they no longer have any lives remaining. After the game ends, a score is calculated based on the amount of obstacles successfully avoided.
 
 
 ## MVP
