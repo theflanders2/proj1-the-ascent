@@ -1,7 +1,7 @@
 body {
   padding: 0;
   text-align: center;
-  font-family: "Arial", sans-serif;
+  font-family: "Bree Serif", serif;
 }
 
 p {
@@ -135,7 +135,7 @@ button:hover {
 
 .game-stats {
   width: 100px;
-  height: 100px;
+  height: 120px;
   background-color: #fff;
   border: 3px solid #397c13;
   border-radius: 10px;

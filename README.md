@@ -3,18 +3,19 @@
 [Play now!](https://theflanders2.github.io/proj1-the-ascent/)
 
 ## Description
-***The Ascent*** is a game where players try to survive as long as possible while climbing the side of a volcano and avoiding obstacles. The game ends when the player has collided with so many obstacles to the point where they no longer have any lives remaining. After the game ends, a score is calculated based on the amount of obstacles successfully avoided.
+Brief description of the project
 
 
 ## MVP
+
 _MVP definition here, list of minimum features_
 
-
 ## Backlog
+
 _List of features you might implement after the MVP_
 
-
 ## Technologies Used
+
 - HTML
 - CSS
 - JavaScript
@@ -23,6 +24,7 @@ _List of features you might implement after the MVP_
 ## Project Structure
 
 ### game.js
+
 - Game() class
   - this.startScreen
   - this.gameScreen
@@ -44,6 +46,7 @@ _List of features you might implement after the MVP_
 - endGame() method
 
 ### player.js
+
 - Player() class
   - this.gameScreen
   - this.left
@@ -58,19 +61,21 @@ _List of features you might implement after the MVP_
 - didCollide() method
 
 ### obstacle.js
+
 - Obstacle() class
   - this.gameScreen
   - this.left
   - this.top
   - this.width
   - this.height
-  - this.elementTree
+  - this.elementBoulder
   - this.elementBoulder
   - this.elementBear
 - updatePosition() method
 - move() method
 
 ### collectable.js
+
 - Collectable() class
   - this.gameScreen
   - this.left
@@ -82,6 +87,7 @@ _List of features you might implement after the MVP_
 - move() method
 
 ### script.js
+
 - window.onload
 - startGame() function
 - restartGame() function
@@ -89,16 +95,15 @@ _List of features you might implement after the MVP_
 - startButton eventListener
 - restartButton eventListener
 
-
 ## States
+
 - Intro Screen
 - Game Screen
 - End Screen
 
-
 ## Task
-_List of tasks in order of priority_
 
+_List of tasks in order of priority_
 
 ## Links
 
@@ -108,4 +113,5 @@ _List of tasks in order of priority_
 - [Deployment Link](https://theflanders2.github.io/proj1-the-ascent/)
 
 ## Contributors / Team
+
 [Brice Cabioch](https://github.com/Bricebrice), [Kenneth Flanders](https://github.com/theflanders2)

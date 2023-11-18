@@ -53,9 +53,9 @@ class Player {
 
   didCollide(obstacle) {
     const playerRect = this.elementPlayerClimber.getBoundingClientRect();
-    const obstacleRectTree = obstacle.elementTree.getBoundingClientRect();
-    const obstacleBoulder = obstacle.elementBoulder.getBoundingClientRect();
-    const obstacleBear = obstacle.elementBear.getBoundingClientRect();
+    const obstacleRectTree = obstacle.elementBoulder.getBoundingClientRect();
+    // const obstacleBoulder = obstacle.elementBoulder.getBoundingClientRect();
+    // const obstacleBear = obstacle.elementBear.getBoundingClientRect();
 
     if (
       playerRect.left <
