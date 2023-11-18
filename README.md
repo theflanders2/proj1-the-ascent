@@ -102,7 +102,7 @@
 ## Links
 
 - [Trello Link](https://trello.com/b/mrn2ZLo1)
-- [Slides Link]()
+- [Slides Link](123)
 - [Github repository Link](https://github.com/theflanders2/proj1-the-ascent)
 - [Deployment Link](https://theflanders2.github.io/proj1-the-ascent/)
 
