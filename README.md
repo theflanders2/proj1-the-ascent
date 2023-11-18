@@ -6,13 +6,15 @@
 ***The Ascent*** is a game where players try to survive as long as possible. The game ends when the climber has collided with three obstacles. After the game ends, the time (in seconds) is displayed on the end screen to let the player know how long they were able to survive.
 
 ## Main Functionalities
-- Obstacles appear randomly, on different levels and move automatically
-- Player changes direction by using the following arrows `left`, `right`, `up` and `down`.
+- Obstacles appear randomly, on different levels and automatically move down the screen
+- Player changes direction by using the arrows `left`, `right`, `up` and `down` arrows on the keyboard.
 - Time elapsed is tracked and displayed at the end end screen.
 
 ## Backlog
 - Add the ability to set the game difficulty
-- Add logic to increase the speed of the obstacle
+- Add logic to increase the speed of the obstacles
+- Add logic to allow for multiple different obstacles
+- Add logic to for a collectable item
 
 ## Technologies Used
 
